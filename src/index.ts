@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 
 app.post('/translateFrench', async (req:Request, res:Response) =>{
     const text = req.body.text;
-    const fromLag = req.body?.fromLag || "en";
-    const toLang = req.body?.toLag || "fr";
+    const fromLag = req.body?.fromLang || "en";
+    const toLang = req.body?.toLang || "fr";
 
     if(!text){
         res.status(400).json({error:'Missing text parameter'})
